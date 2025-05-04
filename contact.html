@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Dhanashree Finance Service</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html" >Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #2d033b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #5e239d;
+        }
+
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: #2d033b;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 2rem;
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1000;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+
+            .navbar-links a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Optional: Hide menu on link click (for better UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+
+    <script>
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

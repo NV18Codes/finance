@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Dhanashree Finance Service</title>
+    <meta name="description"
+        content="Learn about Dhanashree Finance Service, a leading provider of personal loans, business loans, home loans, and more. Founded by Pravin Balaji Suryavanshi, our expertise spans over 14 years of experience in providing trusted financial solutions." />
+    <meta name="keywords"
+        content="Dhanashree Finance, personal loans, business loans, home loans, financial expert, Pravin Balaji Suryavanshi, loan services" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #2d033b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #5e239d;
+        }
+
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: #2d033b;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 2rem;
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1000;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+
+            .navbar-links a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Optional: Hide menu on link click (for better UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+
+    <script>
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+
+    <section class="hero about-hero">
+        <div class="hero-content">
+            <h2 style="color: #c784f7;">About Dhanashree Finance Service</h2>
+            <p>Your trusted financial partner committed to helping you achieve your goals.</p>
+        </div>
+    </section>
+    <section class="about-content container">
+        <div class="company-info section-box">
+            <h2>Who We Are</h2>
+            <div class="about-us-founder">
+                <div class="about-text">
+                    <h3>About Dhanashree Finance Service</h3>
+                    <p><strong>Dhanashree Finance Service</strong> is a premier financial services provider, offering a
+                        wide range of loan options. We collaborate with over 150 banks and financial institutions to
+                        bring the best loan solutions to our clients.</p>
+                    <p>Our expertise helps individuals and businesses access tailored financial solutions, breaking down
+                        barriers to achieve their financial goals.</p>
+                </div>
+                <div class="founder-images">
+                    <img src="https://imgs.search.brave.com/U8k-7LtO9h738Ouh4I2J_HlJZyC_7dNk3AGr-L6QkeI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA0LzYwLzcxLzQ4/LzM2MF9GXzQ2MDcx/NDgyMl96dkZseFp2/czNyVEt6WEx4R01y/OVFONmZPUTBiSkNk/WC5qcGc"
+                        alt="Dhanashree company Image" />
+                </div>
+            </div>
+            <style>
+                .company-info {
+                    text-align: center;
+                    margin: 2rem 0;
+                }
+
+                .about-us-founder {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                .about-us-founder .about-text {
+                    flex: 1;
+                    padding-right: 2rem;
+                    text-align: left;
+                }
+
+                .about-us-founder .founder-images {
+                    flex: 1;
+                    text-align: center;
+                }
+
+                .about-us-founder .founder-images img {
+                    width: 80%;
+                    max-width: 300px;
+                    margin: 10px 0;
+                }
+            </style>
+        </div>
+    </section>
+    <div class="mission-vision section-box">
+        <div class="mission-card">
+            <h3><span class="icon">🎯</span> Our Mission</h3>
+            <p>Our mission is to reduce the financial barriers faced by individuals with <strong>low CIBIL
+                    scores</strong> or credit challenges, providing them with accessible and reliable <strong>loan
+                    solutions</strong>. We are dedicated to supporting your <strong>financial growth</strong> and
+                making it easier for you to achieve your dreams through personalized financial assistance.</p>
+        </div>
+        <div class="vision-card">
+            <h3><span class="icon">🌟</span> Our Vision</h3>
+            <p>Our vision is to support individuals throughout their life journey—from birth to old age—by offering
+                comprehensive <strong>financial solutions</strong> such as <strong>education loans</strong>,
+                <strong>personal loans</strong>, <strong>home loans</strong>, and <strong>vehicle loans</strong>. We
+                strive to be your lifelong financial partner, empowering you at every stage of life.
+            </p>
+        </div>
+    </div>
+    <div class="founder-section section-box">
+        <h2>Meet Our Founder</h2>
+        <div class="founder-section">
+            <div class="founder-images">
+                <img src="https://imgs.search.brave.com/l0RtMlcgPSHR2Wk-AAkExBehiYKAE_JXpm9sgNhySeo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzI2LzYzLzEx/LzM2MF9GXzEyNjYz/MTE3M19XOU5xOFpB/NXMwUjBNM1pJQngz/Qk15dFZJRnNlR2E5/Yy5qcGc"
+                    alt="Founder PRAVIN BALAJI SURYAVANSAHI" />
+            </div>
+            <div class="founder-text">
+                <h2>Meet Our Founder</h2>
+                <p><strong>PRAVIN BALAJI SURYAVANSAHI</strong> is the visionary founder of <strong>Dhanashree
+                        Finance Service</strong>, a financial expert with over <strong>14 years of
+                        experience</strong> in the industry. His passion for helping individuals and businesses
+                    achieve their financial goals has shaped the foundation of the company. Through his leadership,
+                    the firm has been dedicated to providing tailored financial services that meet the specific
+                    needs of clients, regardless of their credit history.</p>
+                <p>With a deep understanding of the complexities of financial systems, Pravin’s mission is to help
+                    clients navigate their financial challenges by offering them access to affordable and flexible
+                    loan solutions. He has built a trusted reputation by prioritizing transparency, integrity, and
+                    customer satisfaction in every transaction.</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* General styles for the about section */
+
+        /* Section for the company and founder images */
+        .company-info {
+            margin-bottom: 3rem;
+        }
+
+        .about-us-founder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* About text on the left */
+        .about-us-founder .about-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Founder images on the right */
+        .about-us-founder .founder-images {
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Set the image size and ensure responsiveness */
+        .about-us-founder .founder-images img {
+            width: 80%;
+            max-width: 350px;
+            margin: 10px 0;
+        }
+
+        /* Founder section with images */
+        .founder-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* Founder text on the left */
+        .founder-section .founder-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Founder image on the right */
+        .founder-section .founder-images {
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Founder image styles */
+        .founder-section .founder-images img {
+            width: 80%;
+            max-width: 300px;
+            margin: 10px 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+
+            .about-us-founder,
+            .founder-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            /* Removing the padding from text sections for better mobile view */
+            .about-us-founder .about-text,
+            .founder-section .founder-text {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            /* Images will stack vertically on small screens */
+            .about-us-founder .founder-images img,
+            .founder-section .founder-images img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    </section>
+    <br>
+    <div class="values section-box" style="text-align: center;">
+        <h2>Our Core Values</h2>
+        <ul>
+            <li><span class="icon">🤝</span> Integrity: We uphold the highest standards of honesty and transparency
+                in all our dealings.</li>
+            <li><span class="icon">💼</span> Expertise: Our team is dedicated to providing expert financial advice
+                and solutions.</li>
+            <li><span class="icon">🌍</span> Customer-Centric: We prioritize your needs and work tirelessly to meet
+                them.</li>
+            <li><span class="icon">🚀</span> Innovation: We embrace new ideas and technologies to enhance our
+                services and customer experience.</li>
+        </ul>
+    </div>
+    <style>
+        .values ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center align items horizontally */
+            gap: 1.5rem;
+            /* Space between each list item */
+        }
+
+        .values ul li {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            /* Align icon and text vertically */
+            justify-content: center;
+            /* Center-align text */
+            color: #333;
+        }
+
+        .values ul li .icon {
+            margin-right: 1rem;
+            /* Space between icon and text */
+            font-size: 2rem;
+            /* Size of the icon */
+            color: #c784f7;
+            /* Color for the icons */
+        }
+    </style>
+    <br>
+    <div class="why-choose-us section-box">
+        <div class="why-choose-us-text">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li><span class="tick">✔</span> Over 14 years of industry expertise providing trusted financial
+                    solutions.</li>
+                <li><span class="tick">✔</span> Access to loans from over 150 banks and financial institutions.
+                </li>
+                <li><span class="tick">✔</span> Personalized loan options tailored to your unique needs.</li>
+                <li><span class="tick">✔</span> Support for individuals with low CIBIL scores and credit
+                    challenges.
+                </li>
+                <li><span class="tick">✔</span> Comprehensive financial solutions covering personal, business,
+                    home,
+                    and vehicle loans.</li>
+                <li><span class="tick">✔</span> Dedicated customer service focused on your financial growth and
+                    success.</li>
+            </ul>
+        </div>
+        <div class="why-choose-us-image">
+            <img src="https://cdn.pixabay.com/photo/2018/06/12/15/08/question-mark-3470783_1280.jpg"
+                alt="Why Choose Us Visual" />
+        </div>
+    </div>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

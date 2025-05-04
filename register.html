@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Dhanashree Finance Service</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html" >Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #2d033b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #5e239d;
+        }
+
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: #2d033b;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 2rem;
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1000;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+
+            .navbar-links a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Optional: Hide menu on link click (for better UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+
+    <script>
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+    <br>
+    <div class="container">
+        <h2>Apply Now</h2>
+        <div class="apply-container">
+            <div class="apply-image">
+                <img src="https://imgs.search.brave.com/wuohloeRi5EVq6hXvg7_mAktFZ5ilQSp_mw4Jrn6YVk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzk3LzgyLzQ1/LzM2MF9GXzI5Nzgy/NDU2OF9LNGlyUzll/Zld2UlJib3hHMFVT/WkEwQldVTkFOa0Vw/dS5qcGc"
+                    alt="Apply Now" class="services-image-placeholder" />
+            </div>
+            <div class="apply-form">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required />
+
+                    <label for="aadhar">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" required />
+
+                    <label for="pan">PAN Number:</label>
+                    <input type="text" id="pan" name="pan" required />
+
+                    <label for="service">Type of Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="personal_loan">Personal Loan</option>
+                        <option value="business_loan">Business Loan</option>
+                        <option value="home_loan">Home Loan</option>
+                        <option value="mortgage_loan">Mortgage Loan</option>
+                        <option value="project_loan">Project Loan</option>
+                        <option value="msme_loan">MSME Loan</option>
+                        <option value="car_loan">Car Loan</option>
+                    </select>
+
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        .container {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .apply-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .apply-image {
+            flex: 1;
+            text-align: left;
+        }
+
+        .apply-form {
+            flex: 1;
+            text-align: left;
+        }
+
+        .apply-image img {
+            width: 100%;
+            max-width: 600px;
+            height: 600px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form label {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        form input,
+        form select {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 0.8rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #5b4bb1;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .apply-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .apply-form {
+                width: 100%;
+            }
+
+            .apply-image img {
+                max-width: 80%;
+            }
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

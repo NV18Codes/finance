@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhanashree Finance Service | Trusted Loan & Financial Experts</title>
+    <meta name="description"
+        content="Discover tailored financial solutions from Dhanashree Finance Service. We provide personal loans, business funding, home finance, and more with customer-centric service." />
+    <meta name="keywords"
+        content="Dhanashree Finance, Personal Loan, Business Loan, Home Loan, Project Finance, Car Loan, MSME Loan, Best Loan Provider India, Trusted Financial Solutions" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #2d033b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #5e239d;
+        }
+
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: #2d033b;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 2rem;
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1000;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+
+            .navbar-links a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Optional: Hide menu on link click (for better UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+    <section class="hero">
+        <h1>Empowering Your Financial Future</h1>
+        <p>Unlock fast and flexible loans for every need — personal, business, home, and more with Dhanashree Finance
+            Service.</p>
+        <a class="btn-primary" href="#contact">Get Started</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Who We Are</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Client-Centric Approach</h3>
+                <p>We prioritize your needs with personalized loan solutions and expert financial advice.</p>
+            </div>
+            <div class="card">
+                <h3>Trusted Partner</h3>
+                <p>Over 14 years of experience working with 150+ banks to secure the best loan options for you.</p>
+            </div>
+            <div class="card">
+                <h3>Wide Range of Services</h3>
+                <p>From personal to business loans, we cover all your financial needs with tailored products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Core Financial Services</h2>
+        <p>At Dhanashree Finance Service, we offer a variety of financial solutions to meet your needs and help you
+            achieve your financial goals. Explore our core services below:</p>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Personal Loans</h3>
+                <p>Fast approval with minimal documentation for personal needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Business Loans</h3>
+                <p>Support to scale your business confidently with our funding solutions.</p>
+            </div>
+            <div class="service-item">
+                <h3>Home Loans</h3>
+                <p>Affordable financing options to help you buy your dream home.</p>
+            </div>
+            <div class="service-item">
+                <h3>Car Loans</h3>
+                <p>Flexible loan options to make car ownership a reality.</p>
+            </div>
+            <div class="service-item">
+                <h3>Project & MSME Loans</h3>
+                <p>Financial solutions tailored to businesses and development projects.</p>
+            </div>
+        </div>
+        <div class="cta-button">
+            <a href="services.html" class="btn">Explore All Services</a>
+        </div>
+    </section>
+
+    <style>
+        .services {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            color: #5e239d;
+            margin-bottom: 1rem;
+        }
+
+        .services p {
+            font-size: 1.2rem;
+            color: #2d033b;
+            margin-bottom: 2rem;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .service-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            color: #5e239d;
+            margin-bottom: 1rem;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #2d033b;
+        }
+
+        .cta-button {
+            margin-top: 2rem;
+        }
+
+        .cta-button .btn {
+            background-color: #6a5acd;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button .btn:hover {
+            background-color: #5b4bb1;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 100%;
+                padding: 1.5rem;
+            }
+
+            .cta-button .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-carousel" id="carousel">
+            <div class="testimonial-item">
+                <p><strong>Pramod Birajadar - Pune</strong></p>
+                <p>"Excellent service and quick loan approval."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Amol Bubane - Pune</strong></p>
+                <p>"Very helpful and professional staff."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Dnyaneshwar Giri - Pune</strong></p>
+                <p>"Flexible repayment options and smooth process."</p>
+                <div class="stars">★★★★☆</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Swati Jadhav - Mumbai</strong></p>
+                <p>"Quick disbursal and polite team. Highly recommend Dhanashree!"</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Rahul Patil - Nashik</strong></p>
+                <p>"They helped me secure a business loan with ease. Great support."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Pooja Nair - Navi Mumbai</strong></p>
+                <p>"Seamless documentation and friendly service throughout the loan process."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Sachin Kulkarni - Kolhapur</strong></p>
+                <p>"Great experience! Dhanashree understood my needs and delivered fast results."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </section>
+    <!-- content omitted for brevity -->
+    <script>
+        (function () {
+            const carousel = document.getElementById('carousel');
+            if (!carousel) return;
+            let index = 0;
+            const totalItems = carousel.children.length;
+
+            function updateCarousel() {
+                const offset = -index * 100;
+                for (const item of carousel.children) {
+                    item.style.transform = `translateX(${offset}%)`;
+                }
+            }
+
+            function nextSlide() {
+                index = (index + 1) % totalItems;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                index = (index - 1 + totalItems) % totalItems;
+                updateCarousel();
+            }
+
+            document.getElementById('nextBtn').addEventListener('click', nextSlide);
+            document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+            setInterval(nextSlide, 3000);
+        })();
+    </script>
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>What types of loans can I apply for?</summary>
+            <p>We offer personal, business, home, car, mortgage, MSME, and project loans.</p>
+        </details>
+        <details>
+            <summary>How fast can I get loan approval?</summary>
+            <p>Loan approvals typically take 24–48 hours post documentation.</p>
+        </details>
+        <details>
+            <summary>Can I apply online?</summary>
+            <p>Yes, our entire loan process can be started online or through a phone call with our support team.</p>
+        </details>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+        <p>Designed with care to serve you better.</p>
+    </footer>
+
+    <a class="apply-now-btn" href="register.html">Apply Now</a>
+
+
+</html>

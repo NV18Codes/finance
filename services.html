@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Dhanashree Finance Service</title>
+    <meta name="description"
+        content="Explore the wide range of financial services offered by Dhanashree Finance Service including personal loans, business loans, home loans, mortgage loans, project loans, MSME loans, and car loans." />
+    <meta name="keywords"
+        content="Personal Loan, Business Loan, Home Loan, Mortgage Loan, Project Loan, MSME Loan, Car Loan, Financial Services" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html" >Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #2d033b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #5e239d;
+        }
+
+        /* Hamburger hidden by default */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: #2d033b;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 2rem;
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1000;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+
+            .navbar-links a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Optional: Hide menu on link click (for better UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+
+    <section class="hero services-hero">
+        <div class="hero-content">
+            <h2 style="color: #c784f7;">Financial Solutions Tailored for You</h2>
+            <p>Comprehensive loan services to meet your personal and business needs.</p>
+        </div>
+    </section>
+
+    <style>
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .services-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .services-image-placeholder {
+            display: block;
+            margin: 0 auto 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card.centered-last {
+                grid-column: 2 / 3;
+            }
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            color: #000000;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            background-color: #6a0dad;
+            color: #ffffff;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+            color: inherit;
+        }
+
+        .card p {
+            color: inherit;
+            font-size: 1rem;
+        }
+    </style>
+
+    <section class="services-content">
+        <h2>Our Loan Services</h2>
+        <img src="services-img.webp" alt="Financial Services" class="services-image-placeholder" />
+    </section>
+    <br>
+    <section class="services-content">
+        <h2>Explore Our Services</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Personal Loan - Salaried</h3>
+                <p>Access loans from 150 banks ranging from ₹50,000 to ₹75 Lakhs with flexible repayment options.
+                    Interest rates range from 9% to 18%.</p>
+            </div>
+
+            <div class="card">
+                <h3>Business Loans</h3>
+                <p>Loans from ₹50,000 to ₹500 Crores tailored to your business scale and sector requirements. Interest
+                    rates range from 9.90% to 24%.</p>
+            </div>
+
+            <div class="card">
+                <h3>New Home Loan</h3>
+                <p>Home loans ranging from ₹5 Lakhs to ₹500 Crores with competitive interest rates between 8.30% and
+                    14%.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mortgage Loans</h3>
+                <p>Secure mortgage loans with flexible terms to suit your financial goals. Interest rates range from
+                    8.30% to 14%.</p>
+            </div>
+
+            <div class="card">
+                <h3>Project Loans</h3>
+                <p>Financing solutions for your business projects with customized plans. Interest rate at 9%.</p>
+            </div>
+
+            <div class="card">
+                <h3>MSME Loans</h3>
+                <p>Support for Micro, Small, and Medium Enterprises with tailored loan products. Interest rate at 9%.
+                </p>
+            </div>
+
+            <div class="card centered-last">
+                <h3>Car Loans</h3>
+                <p>Car loans from ₹5 Lakhs to ₹50 Lakhs with easy approval processes. Interest rates range from 7% to
+                    14%.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
