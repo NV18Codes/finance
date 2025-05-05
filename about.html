@@ -106,6 +106,57 @@
                 margin: 0.5rem 0;
             }
         }
+
+        /* Additional responsive tweaks */
+        .about-us-founder,
+        .founder-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-us-founder .about-text,
+        .founder-section .founder-text {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .about-us-founder .founder-images img,
+        .founder-section .founder-images img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .values ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .values ul li {
+            font-size: 1rem;
+            justify-content: center;
+        }
+
+        .why-choose-us {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .why-choose-us-text,
+        .why-choose-us-image {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        .why-choose-us-text ul {
+            padding-left: 0;
+        }
+
+        /* Responsive fix for mission and vision stacking on small screens */
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column !important;
+            }
+        }
     </style>
     <script>
         const hamburger = document.getElementById('hamburgerBtn');
@@ -166,22 +217,22 @@
                     justify-content: space-between;
                     align-items: center;
                     flex-wrap: wrap;
+                    gap: 2rem;
                 }
 
                 .about-us-founder .about-text {
                     flex: 1;
-                    padding-right: 2rem;
                     text-align: left;
                 }
 
                 .about-us-founder .founder-images {
                     flex: 1;
-                    text-align: center;
+                    text-align: right;
                 }
 
                 .about-us-founder .founder-images img {
                     width: 80%;
-                    max-width: 300px;
+                    max-width: 350px;
                     margin: 10px 0;
                 }
             </style>

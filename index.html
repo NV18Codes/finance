@@ -13,6 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
 </head>
 
 <body>
@@ -150,119 +158,143 @@
     </section>
 
     <section id="services" class="services">
-        <h2>Our Core Financial Services</h2>
-        <p>At Dhanashree Finance Service, we offer a variety of financial solutions to meet your needs and help you
-            achieve your financial goals. Explore our core services below:</p>
-        <div class="services-list">
-            <div class="service-item">
-                <h3>Personal Loans</h3>
-                <p>Fast approval with minimal documentation for personal needs.</p>
-            </div>
-            <div class="service-item">
-                <h3>Business Loans</h3>
-                <p>Support to scale your business confidently with our funding solutions.</p>
-            </div>
-            <div class="service-item">
-                <h3>Home Loans</h3>
-                <p>Affordable financing options to help you buy your dream home.</p>
-            </div>
-            <div class="service-item">
-                <h3>Car Loans</h3>
-                <p>Flexible loan options to make car ownership a reality.</p>
-            </div>
-            <div class="service-item">
-                <h3>Project & MSME Loans</h3>
-                <p>Financial solutions tailored to businesses and development projects.</p>
-            </div>
-        </div>
-        <div class="cta-button">
+        <div class="container">
+            <h2>Our Core Financial Services</h2>
+            <p class="subtitle">
+                At Dhanashree Finance Service, we offer tailored financial solutions to meet your needs and help you
+                reach your goals.
+            </p>
+
+            <ul class="service-list">
+                <li>
+                    <h3><i class="fas fa-user-circle icon"></i> Personal Loans</h3>
+                    <p>Quick approvals for personal needs with minimal paperwork.</p>
+                </li>
+                <li>
+                    <h3><i class="fas fa-briefcase icon"></i> Business Loans</h3>
+                    <p>Grow your business confidently with our strategic funding support.</p>
+                </li>
+                <li>
+                    <h3><i class="fas fa-home icon"></i> Home Loans</h3>
+                    <p>Affordable and flexible options to make your dream home a reality.</p>
+                </li>
+                <li>
+                    <h3><i class="fas fa-car icon"></i> Car Loans</h3>
+                    <p>Finance your car purchase smoothly with customized loan options.</p>
+                </li>
+                <li>
+                    <h3><i class="fas fa-industry icon"></i> Project & MSME Loans</h3>
+                    <p>Specialized solutions for your projects and small business needs.</p>
+                </li>
+            </ul>
+
             <a href="services.html" class="btn">Explore All Services</a>
         </div>
     </section>
 
     <style>
         .services {
-            text-align: center;
-            padding: 3rem 0;
             background-color: #f8f9fa;
+            padding: 4rem 1rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .services .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .services h2 {
             font-size: 2.5rem;
-            color: #5e239d;
+            color: #4b2e83;
             margin-bottom: 1rem;
         }
 
-        .services p {
+        .services .subtitle {
             font-size: 1.2rem;
-            color: #2d033b;
+            color: #555;
+            margin-bottom: 2.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 3rem 0;
+            text-align: left;
+        }
+
+        .service-list li {
             margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 4px solid #4b2e83;
         }
 
-        .services-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+        .service-list h3 {
+            font-size: 1.4rem;
+            color: #4b2e83;
+            margin-bottom: 0.5rem;
         }
 
-        .service-item {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 2rem;
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-        }
-
-        .service-item h3 {
-            font-size: 1.5rem;
-            color: #5e239d;
-            margin-bottom: 1rem;
-        }
-
-        .service-item p {
+        .service-list p {
             font-size: 1rem;
-            color: #2d033b;
+            color: #333;
+            margin: 0;
         }
 
-        .cta-button {
-            margin-top: 2rem;
-        }
-
-        .cta-button .btn {
-            background-color: #6a5acd;
+        .btn {
+            display: inline-block;
+            background-color: #4b2e83;
             color: #fff;
-            font-size: 1.1rem;
-            padding: 12px 24px;
-            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
             text-decoration: none;
+            font-size: 1rem;
             transition: background-color 0.3s ease;
         }
 
-        .cta-button .btn:hover {
-            background-color: #5b4bb1;
+        .btn:hover {
+            background-color: #37226a;
         }
 
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .service-item {
-                width: 100%;
-                padding: 1.5rem;
+        @media (max-width: 600px) {
+            .services h2 {
+                font-size: 2rem;
             }
 
-            .cta-button .btn {
-                padding: 10px 20px;
+            .services .subtitle {
+                font-size: 1rem;
             }
+
+            .service-list h3 {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                font-size: 0.95rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
+
+        .service-list h3 {
+            font-size: 1.4rem;
+            color: #4b2e83;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list .icon {
+            font-size: 1.4rem;
+            color: #4b2e83;
         }
     </style>
 
+    <!-- Place this inside the <body> tag where you want the testimonial section -->
     <section class="testimonials">
         <h2>What Our Clients Say</h2>
-        <div class="testimonial-carousel" id="carousel">
+        <div class="owl-carousel owl-theme" id="testimonial-carousel">
             <div class="testimonial-item">
                 <p><strong>Pramod Birajadar - Pune</strong></p>
                 <p>"Excellent service and quick loan approval."</p>
@@ -299,42 +331,118 @@
                 <div class="stars">★★★★★</div>
             </div>
         </div>
-        <div class="carousel-controls">
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-        </div>
     </section>
-    <!-- content omitted for brevity -->
+
+    <!-- Owl Carousel CSS & jQuery CDN -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel Initialization -->
     <script>
-        (function () {
-            const carousel = document.getElementById('carousel');
-            if (!carousel) return;
-            let index = 0;
-            const totalItems = carousel.children.length;
-
-            function updateCarousel() {
-                const offset = -index * 100;
-                for (const item of carousel.children) {
-                    item.style.transform = `translateX(${offset}%)`;
-                }
-            }
-
-            function nextSlide() {
-                index = (index + 1) % totalItems;
-                updateCarousel();
-            }
-
-            function prevSlide() {
-                index = (index - 1 + totalItems) % totalItems;
-                updateCarousel();
-            }
-
-            document.getElementById('nextBtn').addEventListener('click', nextSlide);
-            document.getElementById('prevBtn').addEventListener('click', prevSlide);
-
-            setInterval(nextSlide, 3000);
-        })();
+        $(document).ready(function () {
+            $('#testimonial-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                items: 1,
+                navText: ["<span class='nav-btn'>&larr;</span>", "<span class='nav-btn'>&rarr;</span>"]
+            });
+        });
     </script>
+
+    <!-- Style for Testimonials Section -->
+    <style>
+        .testimonials {
+            padding: 5rem 1rem 4rem;
+            background: #f5f5fa;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            color: #4b2e83;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-item {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin: auto;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .testimonial-item p {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        .testimonial-item strong {
+            color: #4b2e83;
+            font-size: 1.1rem;
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .owl-nav {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .owl-nav .nav-btn {
+            background-color: #4b2e83;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 0 0.4rem;
+            transition: background 0.3s ease;
+        }
+
+        .owl-nav .nav-btn:hover {
+            background-color: #37226a;
+        }
+
+        /* Remove scrollbars completely */
+        #testimonial-carousel {
+            overflow: hidden !important;
+        }
+
+        @media (max-width: 600px) {
+            .testimonials h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-item {
+                padding: 1.5rem 1rem;
+            }
+
+            .owl-nav .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+
+
     <section id="faq" class="faq">
         <h2>Frequently Asked Questions</h2>
         <details>
