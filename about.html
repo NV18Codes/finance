@@ -64,7 +64,7 @@
         }
 
         .navbar-links a:hover {
-            color: #5e239d;
+            color: white;
         }
 
         /* Hamburger hidden by default */
@@ -185,7 +185,7 @@
 
     <section class="hero about-hero">
         <div class="hero-content">
-            <h2 style="color: #c784f7;">About Dhanashree Finance Service</h2>
+            <h2 style="color: #ffffff;">About Dhanashree Finance Service</h2>
             <p>Your trusted financial partner committed to helping you achieve your goals.</p>
         </div>
     </section>
@@ -415,36 +415,96 @@
     </style>
     <br>
     <div class="why-choose-us section-box">
+        <div class="why-choose-us-image">
+            <img src="https://cdn.pixabay.com/photo/2018/06/12/15/08/question-mark-3470783_1280.jpg"
+                alt="Why Choose Us Visual">
+        </div>
+
         <div class="why-choose-us-text">
             <h2>Why Choose Us</h2>
             <ul>
                 <li><span class="tick">✔</span> Over 14 years of industry expertise providing trusted financial
                     solutions.</li>
-                <li><span class="tick">✔</span> Access to loans from over 150 banks and financial institutions.
-                </li>
+                <li><span class="tick">✔</span> Access to loans from over 150 banks and financial institutions.</li>
                 <li><span class="tick">✔</span> Personalized loan options tailored to your unique needs.</li>
-                <li><span class="tick">✔</span> Support for individuals with low CIBIL scores and credit
-                    challenges.
+                <li><span class="tick">✔</span> Support for individuals with low CIBIL scores and credit challenges.
                 </li>
-                <li><span class="tick">✔</span> Comprehensive financial solutions covering personal, business,
-                    home,
-                    and vehicle loans.</li>
-                <li><span class="tick">✔</span> Dedicated customer service focused on your financial growth and
-                    success.</li>
+                <li><span class="tick">✔</span> Comprehensive financial solutions covering personal, business, home, and
+                    vehicle loans.</li>
+                <li><span class="tick">✔</span> Dedicated customer service focused on your financial growth and success.
+                </li>
             </ul>
         </div>
-        <div class="why-choose-us-image">
-            <img src="https://cdn.pixabay.com/photo/2018/06/12/15/08/question-mark-3470783_1280.jpg"
-                alt="Why Choose Us Visual" />
-        </div>
     </div>
-    </section>
+    <style>
+        .why-choose-us {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
 
+        /* On larger screens (laptops and up), make it side by side */
+        @media (min-width: 769px) {
+            .why-choose-us {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 3rem;
+            }
 
+            .why-choose-us-image,
+            .why-choose-us-text {
+                flex: 1;
+                max-width: 50%;
+            }
+        }
+
+        .why-choose-us-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .why-choose-us-image img {
+            width: 100%;
+            max-width: 700px;
+            height: 350px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(74, 0, 114, 0.2);
+        }
+
+        .why-choose-us-text h2 {
+            color: #5e239d;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .why-choose-us-text ul {
+            list-style: none;
+            padding: 0;
+            color: #2d033b;
+        }
+
+        .why-choose-us-text ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .why-choose-us-text ul li .tick {
+            color: #5e239d;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+    </style>
 
     <footer>
         <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
     </footer>
+    <a class="apply-now-btn" href="register.html">Apply Now</a>
+
 </body>
 
 </html>

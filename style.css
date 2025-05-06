@@ -54,7 +54,7 @@ a {
 .navbar-links a:hover,
 .navbar-links a.active {
     background-color: #5e239d;
-    color: #fff;
+    color: white;
 }
 
 .hero {
@@ -178,7 +178,9 @@ footer {
 }
 
 /* Responsive Enhancements */
-img, video, iframe {
+img,
+video,
+iframe {
     max-width: 100%;
     height: auto;
 }
@@ -189,7 +191,10 @@ img, video, iframe {
     margin: 0 auto;
 }
 
-.card-container, .services-list, .testimonial-carousel, .why-choose-us {
+.card-container,
+.services-list,
+.testimonial-carousel,
+.why-choose-us {
     flex-wrap: wrap;
 }
 
@@ -408,46 +413,6 @@ img, video, iframe {
 .vision-card h3 {
     color: #5e239d;
     margin-bottom: 1rem;
-}
-
-.why-choose-us {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.why-choose-us-text {
-    flex: 1 1 300px;
-}
-
-.why-choose-us-text ul {
-    list-style-type: none;
-    padding-left: 0;
-    color: #2d033b;
-}
-
-.why-choose-us-text ul li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.why-choose-us-text ul li .tick {
-    color: #5e239d;
-    margin-right: 0.5rem;
-}
-
-.why-choose-us-image {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-}
-
-.why-choose-us-image img {
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(74, 0, 114, 0.2);
 }
 
 /* Card Container */

@@ -35,8 +35,8 @@
             </button>
 
             <nav class="navbar-links" id="navMenu">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
+                <a href="index.html"class="active">Home</a>
+                <a href="about.html" >About</a>
                 <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -74,7 +74,7 @@
         }
 
         .navbar-links a:hover {
-            color: #5e239d;
+            color: white;
         }
 
         /* Hamburger hidden by default */
@@ -117,8 +117,7 @@
             }
         }
     </style>
-    <script>
-        const hamburger = document.getElementById('hamburgerBtn');
+    <script>const hamburger = document.getElementById('hamburgerBtn');
         const navMenu = document.getElementById('navMenu');
 
         hamburger.addEventListener('click', () => {
@@ -131,14 +130,15 @@
                 navMenu.classList.remove('show');
             });
         });
+
     </script>
     <section class="hero">
         <h1>Empowering Your Financial Future</h1>
-        <p>Unlock fast and flexible loans for every need — personal, business, home, and more with Dhanashree Finance
-            Service.</p>
-        <a class="btn-primary" href="#contact">Get Started</a>
+        <p>Unlock fast and flexible loans for every need — personal,
+            business,
+            home,
+            and more with Dhanashree Finance Service.</p><a class="btn-primary" href="services.html">Get Started</a>
     </section>
-
     <section id="about" class="about">
         <h2>Who We Are</h2>
         <div class="card-container">
@@ -148,50 +148,44 @@
             </div>
             <div class="card">
                 <h3>Trusted Partner</h3>
-                <p>Over 14 years of experience working with 150+ banks to secure the best loan options for you.</p>
+                <p>Over 14 years of experience working with 150+banks to secure the best loan options for you.</p>
             </div>
             <div class="card">
                 <h3>Wide Range of Services</h3>
-                <p>From personal to business loans, we cover all your financial needs with tailored products.</p>
+                <p>From personal to business loans,
+                    we cover all your financial needs with tailored products.</p>
             </div>
         </div>
     </section>
-
     <section id="services" class="services">
         <div class="container">
             <h2>Our Core Financial Services</h2>
-            <p class="subtitle">
-                At Dhanashree Finance Service, we offer tailored financial solutions to meet your needs and help you
-                reach your goals.
-            </p>
-
+            <p class="subtitle">At Dhanashree Finance Service,
+                we offer tailored financial solutions to meet your needs and help you reach your goals. </p>
             <ul class="service-list">
                 <li>
-                    <h3><i class="fas fa-user-circle icon"></i> Personal Loans</h3>
+                    <h3><i class="fas fa-user-circle icon"></i>Personal Loans</h3>
                     <p>Quick approvals for personal needs with minimal paperwork.</p>
                 </li>
                 <li>
-                    <h3><i class="fas fa-briefcase icon"></i> Business Loans</h3>
+                    <h3><i class="fas fa-briefcase icon"></i>Business Loans</h3>
                     <p>Grow your business confidently with our strategic funding support.</p>
                 </li>
                 <li>
-                    <h3><i class="fas fa-home icon"></i> Home Loans</h3>
+                    <h3><i class="fas fa-home icon"></i>Home Loans</h3>
                     <p>Affordable and flexible options to make your dream home a reality.</p>
                 </li>
                 <li>
-                    <h3><i class="fas fa-car icon"></i> Car Loans</h3>
+                    <h3><i class="fas fa-car icon"></i>Car Loans</h3>
                     <p>Finance your car purchase smoothly with customized loan options.</p>
                 </li>
                 <li>
-                    <h3><i class="fas fa-industry icon"></i> Project & MSME Loans</h3>
+                    <h3><i class="fas fa-industry icon"></i>Project & MSME Loans</h3>
                     <p>Specialized solutions for your projects and small business needs.</p>
                 </li>
-            </ul>
-
-            <a href="services.html" class="btn">Explore All Services</a>
+            </ul><a href="services.html" class="btn">Explore All Services</a>
         </div>
     </section>
-
     <style>
         .services {
             background-color: #f8f9fa;
@@ -405,20 +399,20 @@
         }
 
         .owl-nav .nav-btn {
-            background-color: #4b2e83;
-            color: white;
+            /* background-color: #4b2e83; */
+            color: #4b2e83;
             border: none;
             padding: 0.6rem 1.4rem;
-            font-size: 1rem;
+            font-size: 2rem;
             border-radius: 25px;
             cursor: pointer;
             margin: 0 0.4rem;
             transition: background 0.3s ease;
         }
 
-        .owl-nav .nav-btn:hover {
+        /* .owl-nav .nav-btn:hover {
             background-color: #37226a;
-        }
+        } */
 
         /* Remove scrollbars completely */
         #testimonial-carousel {

@@ -6,28 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Dhanashree Finance Service</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <header class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo"></a>
-            </div>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
-                ☰
-            </button>
-
-            <nav class="navbar-links" id="navMenu">
-                <a href="index.html" >Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-        </div>
-    </header>
     <style>
+        /* === Navbar === */
         .navbar {
             background-color: #fff;
             border-bottom: 1px solid #ddd;
@@ -59,10 +39,13 @@
         }
 
         .navbar-links a:hover {
-            color: #5e239d;
+            color: #ffffff;
         }
 
-        /* Hamburger hidden by default */
+        .navbar-links a.active {
+            color: #ffffff;
+        }
+
         .hamburger {
             display: none;
             font-size: 2rem;
@@ -71,7 +54,6 @@
             cursor: pointer;
         }
 
-        /* Responsive behavior */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
@@ -102,12 +84,33 @@
             }
         }
 
-        /* Additional responsive tweaks */
-        .container {
-            padding: 1rem;
-            width: 90%;
-            max-width: 600px;
-            margin: 2rem auto;
+        /* === Layout === */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 3rem auto;
+            background: #fafafa;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .contact-image {
+            flex: 1 1 50%;
+            background: url('https://media.istockphoto.com/id/1214953303/photo/contact-us-button-customer-support-information.jpg?s=612x612&w=0&k=20&c=z17p9Ht7CnGKkjg7SkKBPi775C5u_NnjvqE9lLqOGz8=') no-repeat center center/cover;
+            min-height: 400px;
+        }
+
+        .contact-form {
+            flex: 1 1 50%;
+            padding: 2rem;
+            background-color: white;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 1.5rem;
+            color: #2d033b;
         }
 
         form {
@@ -117,20 +120,128 @@
         }
 
         form label {
-            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
         }
 
         form input,
-        form textarea {
-            font-size: 1rem;
+        form textarea,
+        form select {
             padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
         }
 
-        form input[type="submit"] {
-            padding: 12px;
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        input[type="submit"] {
+            padding: 0.9rem;
             font-size: 1.1rem;
+            background-color: #5e239d;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #42156d;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+
+            .contact-image {
+                min-height: 250px;
+            }
+        }
+
+        /* === Footer === */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #42156d;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #ffffff;
         }
     </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.png" alt="Dhanashree Finance Logo" /></a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
+
+            <nav class="navbar-links" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-wrapper">
+        <div class="contact-image"></div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="loanType">Loan Type</label>
+                <select id="loanType" name="loanType">
+                    <option value="">-- Select Loan Type --</option>
+                    <option value="personal">Personal</option>
+                    <option value="home">Home</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="business">Business</option>
+                </select>
+
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+
+                <input type="submit" value="Send Message" />
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
+    </footer>
+
     <script>
         const hamburger = document.getElementById('hamburgerBtn');
         const navMenu = document.getElementById('navMenu');
@@ -139,42 +250,12 @@
             navMenu.classList.toggle('show');
         });
 
-        // Optional: Hide menu on link click (for better UX)
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('show');
             });
         });
     </script>
-
-    <script>
-        const toggleButton = document.getElementById('navbar-toggle');
-        const navbarLinks = document.getElementById('navbar-links');
-
-        toggleButton.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active');
-        });
-    </script>
-
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <input type="submit" value="Send" />
-        </form>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Dhanashree Finance Service. All rights reserved.</p>
-    </footer>
 </body>
 
 </html>
